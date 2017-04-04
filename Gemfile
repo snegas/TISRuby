@@ -11,6 +11,7 @@ end
 gem 'jquery-rails'
 gem 'haml-rails', '~> 0.4.0'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'rubocop-github'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
