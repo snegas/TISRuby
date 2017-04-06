@@ -1,0 +1,13 @@
+%h1 Listing products
+
+%table.product
+  %tr
+    %th Name
+    %th Price
+    %th Description
+  - @products.each do |product|
+    %tr
+      %td
+        %a{ :href => '/product/show/' + product.id.to_s }= product.name
+      %td= '$' + product.price.to_s
+      %td= product.description

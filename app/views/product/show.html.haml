@@ -1,0 +1,9 @@
+%h1= @product.name
+
+.product-details
+  .details-block
+    %p.label= 'Price: '
+    %p.data= '$'+@product.price.to_s
+  .details-block
+    %p.label= 'Description: '
+    %p.data= @product.description
