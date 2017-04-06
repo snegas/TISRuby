@@ -45,4 +45,4 @@ bower.json
 .idea
 
 config/database.yml
-config/initializers/s3.rb
+config/initializers
