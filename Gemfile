@@ -14,5 +14,11 @@ gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'rubocop-github'
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5'
+end
+
+group :test do
+  gem 'faker'
+  gem 'capybara'
 end
