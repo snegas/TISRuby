@@ -14,6 +14,7 @@ gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'rubocop-github'
 gem 'redis'
 gem 'resque', require: 'resque/server'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'factory_girl_rails'
