@@ -37,6 +37,7 @@ TISRuby::Application.configure do
 
   config.paperclip_defaults = {
       storage: :s3,
-      bucket: 'tisruby-images'
+      bucket: 'tisruby-images',
+      s3_host_name: 's3-eu-west-2.amazonaws.com'
   }
 end

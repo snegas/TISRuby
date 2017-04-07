@@ -2,6 +2,9 @@
 = render partial: '/shared/alert'
 .product-details
   .details-block
+    %p.label= 'Photo: '
+    %p.data= link_to image_tag(@product.photo.url), @product.photo.url, target: '_blank'
+  .details-block
     %p.label= 'Price: '
     %p.data= '$'+@product.price.to_s
   .details-block
