@@ -32,4 +32,23 @@ body {
       margin-right: 0;
     }
   }
+
+  .alert {
+    width: 81%;
+    height: auto;
+
+    .error {
+      background-color: #ff4d4d;
+      border: 1px solid #ff0000;
+    }
+
+    .success {
+      background-color: #70db70;
+      border: 1px solid #248f24;
+    }
+
+    p {
+      padding: 7px;
+    }
+  }
 }

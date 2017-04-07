@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container menu">
-    <p class="menu-title">Menu: </p><nav><a href="/">All products</a><a href="/product/new">Add new</a></nav>
+    <p class="menu-title">Menu: </p><nav><%= link_to 'All products', root_path %><%= link_to 'Add new product', new_products_path %></nav>
   </div>
   <div class="container">
     <%= yield %>

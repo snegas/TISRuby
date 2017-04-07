@@ -15,6 +15,7 @@ gem 'rubocop-github'
 gem 'redis'
 gem 'resque', require: 'resque/server'
 gem 'aws-sdk'
+gem 'paperclip'
 
 group :development, :test do
   gem 'factory_girl_rails'

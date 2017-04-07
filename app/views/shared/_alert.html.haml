@@ -1,0 +1,9 @@
+- flash.each do |key, value|
+  - if key.to_s.eql? 'success'
+    .alert
+      .success
+        %p= value.to_s
+  - elsif key.to_s.eql? 'error'
+    .alert
+      .error
+        %p= value.to_s

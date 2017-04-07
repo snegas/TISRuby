@@ -34,4 +34,9 @@ TISRuby::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  config.paperclip_defaults = {
+      storage: :s3,
+      bucket: 'tisruby-images'
+  }
 end

@@ -45,4 +45,4 @@ bower.json
 .idea
 
 config/database.yml
-config/initializers
+config/aws.yml
