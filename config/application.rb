@@ -69,5 +69,7 @@ module TISRuby
           :request_specs => true
       g.fixture_replacement :factory_girl, :dir => 'specs/factories'
     end
+
+    config.active_record.whitelist_attributes = false
   end
 end

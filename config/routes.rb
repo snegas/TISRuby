@@ -2,6 +2,7 @@ TISRuby::Application.routes.draw do
   resource :products do
     collection do
       get :increase_price
+      get :search
     end
   end
 

@@ -1,5 +1,4 @@
 class Product < ActiveRecord::Base
-  attr_accessible :name, :description, :price, :photo
   validates :name, presence: true, length: { maximum: 50 }
   validates :description, presence: true, length: { maximum: 300 }
   validates :price, presence: true, numericality: { greater_than: 0 }
@@ -8,4 +7,6 @@ class Product < ActiveRecord::Base
   validates_attachment :photo, presence: true,
                        content_type: { content_type: ['image/jpeg', 'image/png', 'image/gif'] },
                        size: { in: 0..2048.kilobytes }
+
+  after_save ThinkingSphinx::RealTime.callback_for(:product)
 end

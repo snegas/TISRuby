@@ -52,3 +52,24 @@ body {
     }
   }
 }
+
+form.search-form {
+  float: right;
+  margin-top: 7px;
+
+  * {
+    display: inline-block;
+  }
+
+  label {
+    width: auto;
+  }
+
+  input {
+    width: auto;
+  }
+
+  input[type="submit"] {
+    margin-top: auto;
+  }
+}

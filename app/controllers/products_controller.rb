@@ -11,6 +11,10 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id].to_i
   end
 
+  def search
+    @products = Product.search params[:product][:search].to_s
+  end
+
   def new
     @product = Product.new
   end

@@ -16,6 +16,7 @@ gem 'redis'
 gem 'resque', require: 'resque/server'
 gem 'aws-sdk', '< 2.0'
 gem 'paperclip'
+gem 'thinking-sphinx', '~> 3.2.0'
 
 group :development, :test do
   gem 'factory_girl_rails'

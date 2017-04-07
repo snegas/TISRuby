@@ -10,6 +10,7 @@
 <body>
   <div class="container menu">
     <p class="menu-title">Menu: </p><nav><%= link_to 'All products', root_path %><%= link_to 'Add new product', new_products_path %></nav>
+    <%= render 'shared/search' %>
   </div>
   <div class="container">
     <%= yield %>

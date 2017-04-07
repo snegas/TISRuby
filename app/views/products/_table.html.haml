@@ -1,0 +1,15 @@
+%table.product
+  %tr
+    %th Name
+    %th Price
+    %th Description
+    %th Actions
+  - @products.each do |product|
+    %tr
+      %td
+        %a{ :href => products_path(id: product.id) }= product.name
+      %td= '$' + product.price.to_s
+      %td= product.description
+      %td
+        = link_to 'Edit', edit_products_path(id: product.id)
+        = link_to 'Destroy', products_path(id: product.id), method: :delete
