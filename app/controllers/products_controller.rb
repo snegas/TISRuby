@@ -8,19 +8,20 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find params[:id].to_i
+    @product = Product.find(params[:id].to_i)
   end
 
   def search
-    @products = Product.search params[:product][:search].to_s
+    @products = Product.search(params[:product][:search].to_s)
   end
 
   def new
     @product = Product.new
+    3.times { @product.product_attachments.build }
   end
 
   def create
-    product = Product.new params[:product]
+    product = Product.new(params[:product])
 
     if product.save
       flash[:success] = 'Product was created'
@@ -32,11 +33,12 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    @product = Product.find params[:id].to_i
+    @product = Product.find(params[:id].to_i)
+    (3 - @product.product_attachments.count).times { @product.product_attachments.build }
   end
 
   def update
-    product = Product.find params[:product][:id].to_i
+    product = Product.find(params[:product][:id].to_i)
 
     if product.update_attributes(params[:product])
       flash[:success] = 'Product was updated'
@@ -48,7 +50,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if Product.destroy params[:id]
+    if Product.destroy(params[:id])
       flash[:success] = 'Product was deleted successfully'
     else
       flash[:error] = 'Product was not deleted'
