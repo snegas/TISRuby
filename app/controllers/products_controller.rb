@@ -1,18 +1,10 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-
-    respond_to do |format|
-      format.html
-    end
   end
 
   def show
     @product = Product.find(params[:id].to_i)
-  end
-
-  def search
-    @products = Product.search(params[:product][:search].to_s)
   end
 
   def new
@@ -30,6 +22,10 @@ class ProductsController < ApplicationController
       flash[:error] = 'Product was not created due to validation failed.'
       redirect_to action: :new
     end
+  end
+
+  def search
+    @products = Product.search(params[:search_query_string])
   end
 
   def edit

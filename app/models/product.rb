@@ -5,4 +5,5 @@ class Product < ActiveRecord::Base
   has_many :product_attachments, dependent: :destroy
   accepts_nested_attributes_for :product_attachments, allow_destroy: true
   after_save ThinkingSphinx::RealTime.callback_for(:product)
+  after_destroy ThinkingSphinx::RealTime.callback_for(:product)
 end
